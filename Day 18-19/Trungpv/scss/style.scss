@@ -1,0 +1,230 @@
+
+
+@import './variables.scss';
+@import './mixins.scss';
+@import './font.scss';
+@import './reset.scss';
+@import './layout.scss';
+
+
+@media (min-width: 320px) and (max-width: 770px){
+    .navbar-toggler-icon {
+        width: 20px;
+        height: 20px;
+    }
+    .menu {
+        margin-top: 4px;
+        display: none;
+        li {
+            margin-left: 25px;
+
+            a {
+                font-size: 14px;
+            }
+        }
+    }
+    .pageBtn {
+        display: none;
+        padding: 6px 18px;
+        margin-top: -6px;
+    }
+
+    .couple {
+        width: 250px;
+          margin-right: 50px;
+    }
+
+    .leftContent {
+        margin-top: 20px;
+
+        &__title {
+            font-size: 12px;
+        }
+
+        &__main {
+            font-size: 30px;
+            line-height: 40px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .leftContent__sub {
+        font-size: 14px;
+    }
+
+    .submit_mail {
+        width: 350px;
+        height: 50px;
+
+        .formBtn {
+            padding: 10px 25px;
+            right: 3px;
+        }
+
+        input {
+            font-size: 14px;
+        }
+    }
+
+    .access {
+        margin-top: 30px;
+
+        &__header {
+            font-size: 35px;
+            line-height: 45px;
+        }
+
+        &__title {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+    .group-icons {
+        width: 250px;
+        margin-left: -28px;;
+        z-index: 999999;
+    }
+
+    .love-icon {
+        display: none;
+    }
+}
+@media (min-width: 992px) and (max-width: 1399px){
+    .menu {
+        margin-top: 2px;
+    }
+    .pageBtn {
+        padding: 12px 30px;
+        margin-top: -10px;
+    }
+
+    .couple {
+        width: 450px;
+    }
+
+    .leftContent {
+        margin-top: 50px;
+        &__main {
+            font-size: 40px;
+            line-height: 40px;
+            margin-bottom: 20px;
+        }
+    }
+
+    .leftContent__sub {
+        font-size: 16px;
+    }
+
+    .submit_mail {
+        width: 450px;
+        height: 58px;
+
+        .formBtn {
+            padding: 11px 30px;
+            right: 8px;
+        }
+    }
+
+    .access {
+        margin-top: 50px;
+        &__header {
+            font-size: 40px;
+            line-height: 50px;
+        }
+
+        &__title {
+            font-size: 14px;
+            line-height: 22px;
+        }
+    }
+    .images .group-icons {
+        left: 110px;
+        width: 550px;
+    }
+
+    img.love-icon {
+        right: 30px !important;
+        width: 60px;
+        top: 350px !important;
+    }
+}
+
+
+
+@media (min-width: 768px) and (max-width: 991px){
+    .menu {
+        margin-top: 4px;
+
+        li {
+            margin-left: 25px;
+
+            a {
+                font-size: 14px;
+            }
+        }
+    }
+    .pageBtn {
+        padding: 6px 18px;
+        margin-top: -6px;
+    }
+
+    .couple {
+        width: 380px;
+    }
+
+    .leftContent {
+        margin-top: 20px;
+
+        &__title {
+            font-size: 12px;
+        }
+
+        &__main {
+            font-size: 30px;
+            line-height: 40px;
+            margin-bottom: 15px;
+        }
+    }
+
+    .leftContent__sub {
+        font-size: 14px;
+    }
+
+    .submit_mail {
+        width: 350px;
+        height: 50px;
+
+        .formBtn {
+            padding: 10px 25px;
+            right: 3px;
+        }
+
+        input {
+            font-size: 14px;
+        }
+    }
+
+    .access {
+        margin-top: 30px;
+
+        &__header {
+            font-size: 35px;
+            line-height: 45px;
+        }
+
+        &__title {
+            font-size: 12px;
+            line-height: 18px;
+        }
+    }
+    .group-icons {
+        width: 380px;
+        z-index: 10;
+        margin-left: -30px;
+    }
+
+    .love-icon {
+        display: none;
+    }
+}
+
