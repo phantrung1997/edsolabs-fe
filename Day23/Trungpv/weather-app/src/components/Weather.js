@@ -28,16 +28,12 @@ export default function Weather() {
   const classes = useStyles();
   const [address, setAddress] = useState("");
   const [city, setCity] = useState([]);
-  const APIkey = {
-    locate: address,
-    key: "e4e11461af63423d92b121001210909 ",
-  };
+ 
   const search = (e) => {
     if (e.key === "Enter") {
-      const url = `http://api.weatherapi.com/v1/forecast.json?key=e4e11461af63423d92b121001210909&q=${APIkey.locate}&days=3&aqi=no&alerts=no `;
+      const url = `${process.env.REACT_APP_API_BASE}forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${address}&days=3&aqi=no&alerts=no `;
       axios.get(url)
         .then((res) => {
-          console.log(res);
           setCity(res.data);
         })
         .catch((err) => {
