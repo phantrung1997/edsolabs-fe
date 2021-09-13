@@ -34,6 +34,7 @@ export default function Weather() {
       const url = `${process.env.REACT_APP_API_BASE}forecast.json?key=${process.env.REACT_APP_API_KEY}&q=${address}&days=3&aqi=no&alerts=no `;
       axios.get(url)
         .then((res) => {
+       
           setCity(res.data);
         })
         .catch((err) => {

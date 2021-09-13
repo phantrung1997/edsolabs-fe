@@ -1,8 +1,8 @@
 import moment from "moment";
 import { Fragment } from "react";
 import Weather3day from "./Weather3day";
-export default function Detailsearch(prop) {
-  const { city } = prop;
+export default function Detailsearch(e) {
+  const { city } = e;
   return (
     <Fragment>
       {typeof city.location != "undefined" ? (

@@ -1,8 +1,8 @@
 import moment from "moment";
 import { Fragment } from "react";
 
-export default function weather3day(prop) {
-  const { city } = prop;
+export default function weather3day(e) {
+  const { city } = e;
   return (
     <Fragment>
        <div className="weather3day">
