@@ -5,7 +5,7 @@ import FormControl from "@material-ui/core/FormControl";
 import { makeStyles } from "@material-ui/core/styles";
 import SearchIcon from "@material-ui/icons/Search";
 import axios from "axios";
-import Detail from "./Search";
+import Detailsearch from "./Search";
 
 const useStyles = makeStyles((theme) => ({
   margin: {
@@ -18,10 +18,6 @@ const useStyles = makeStyles((theme) => ({
     lineHeight: "20px",
     height: "50px",
     outline: "none",
-    [`& fieldset`]: {
-      borderRadius: 50,
-      border: "1px solid gray",
-    },
   },
   input: {
     padding: "10px 0 9px",
@@ -34,12 +30,12 @@ export default function Weather() {
   const [city, setCity] = useState([]);
   const APIkey = {
     locate: address,
+    key: "e4e11461af63423d92b121001210909 ",
   };
   const search = (e) => {
     if (e.key === "Enter") {
       const url = `http://api.weatherapi.com/v1/forecast.json?key=e4e11461af63423d92b121001210909&q=${APIkey.locate}&days=3&aqi=no&alerts=no `;
-      axios
-        .get(url)
+      axios.get(url)
         .then((res) => {
           console.log(res);
           setCity(res.data);
@@ -72,7 +68,7 @@ export default function Weather() {
         />
       </FormControl>
 
-      <Detail city={city} />
+      <Detailsearch city={city} />
     </div>
   );
 }

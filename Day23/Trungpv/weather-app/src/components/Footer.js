@@ -3,8 +3,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import Modal from '@material-ui/core/Modal';
 import Backdrop from '@material-ui/core/Backdrop';
 import Fade from '@material-ui/core/Fade';
-import meo from './meo.jpg'
+import meo from './img/meo.jpg'
+
 const useStyles = makeStyles((theme) => ({
+  
   modal: {
     display: 'flex',
     alignItems: 'center',
@@ -24,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function TransitionsModal() {
+ 
   const classes = useStyles();
   const [open, setOpen] = React.useState(false);
 
@@ -39,7 +42,8 @@ export default function TransitionsModal() {
     <div>
       <h4>© 2021 by FE class. Made with love by {" "}
       <a type="button" onClick={handleOpen}>
-        Trung PV
+        {/* Trung PV */}
+        {process.env.REACT_APP_NAME}
       </a>
       </h4>
       <Modal

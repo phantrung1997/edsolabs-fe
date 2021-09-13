@@ -3,7 +3,6 @@ import { Fragment } from "react";
 
 export default function weather3day(prop) {
   const { city } = prop;
-//   console.log(city);
   return (
     <Fragment>
        <div className="weather3day">

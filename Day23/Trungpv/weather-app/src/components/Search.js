@@ -1,7 +1,7 @@
 import moment from "moment";
 import { Fragment } from "react";
 import Weather3day from "./Weather3day";
-export default function Detail(prop) {
+export default function Detailsearch(prop) {
   const { city } = prop;
   console.log(city);
   return (
