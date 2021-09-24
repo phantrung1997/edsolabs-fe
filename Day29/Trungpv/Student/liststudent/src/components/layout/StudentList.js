@@ -9,8 +9,7 @@ import Select from '@material-ui/core/Select';
 import IconButton from '@material-ui/core/IconButton';
 import SearchIcon from '@material-ui/icons/Search';
 import  StudentData from './StudentData';
-import { Button } from '@material-ui/core';
-import RefreshIcon from '@material-ui/icons/Refresh';
+
 const useStyles = makeStyles(theme => ({
   root: {
     marginTop: "20px",
@@ -29,38 +28,7 @@ const useStyles = makeStyles(theme => ({
 }))
 export const StudentList = (props) => {
   const classes = useStyles();
-  const [age, setAge] = useState();
-  const [gender, setGender] = useState();
-  const [name , setName] = useState('');
-  const [submitName, setSubmitName] = useState('')
-  const [submitAge, setSubmitAge] = useState()
-  const [submitGender, setSubmitGender] = useState()
-  const handleChange = (event) => {
-    setGender(event.target.value);
-  };
-
-  const [visible, setVisible] = useState(5);
-  const handleSearch = (e) => {
-    e.preventDefault()
-    if(!name || name === '') {
-      return
-    }
-    setSubmitName(name)
-    setSubmitAge(age)
-    setSubmitGender(gender)
-    console.log(gender)
-    console.log(name)
-    console.log(age)
-    setName('')
-    setGender('');
-    setAge('');
-  }
-  const handleRefresh = e => {
-    e.preventDefault()
-    setSubmitName('')
-    setSubmitAge()
-    setSubmitGender()
-  }
+ 
   return (
     <Grid container justifyContent="center" spacing={8}>
       <Grid item xs={12} className={classes.submit}>
@@ -71,9 +39,7 @@ export const StudentList = (props) => {
                 id="outlined-basic" 
                 label="Search by name..." 
                 variant="outlined" 
-                value={name}
                 required
-                onChange = {e => setName(e.target.value)}
                 />
             </Grid>
             <Grid item xs={3}>
@@ -82,8 +48,6 @@ export const StudentList = (props) => {
                   <Select
                     labelId="demo-simple-select-outlined-label"
                     id="demo-simple-select-outlined"
-                    value={gender}
-                    onChange={handleChange}
                     label="Gender">
                     <MenuItem value='Male'>Male</MenuItem>
                     <MenuItem value='Female'>Female</MenuItem>
@@ -96,11 +60,10 @@ export const StudentList = (props) => {
                 label="Age" 
                 variant="outlined"
                 required
-                value = {age}
-                onChange = {e => setAge(e.target.value)} />
+              />
             </Grid>
             <Grid item xs={3} className="search">
-              <IconButton onClick={handleSearch}>
+              <IconButton>
                 <SearchIcon/>
               </IconButton>
             </Grid>
@@ -108,12 +71,7 @@ export const StudentList = (props) => {
         </form>
       </Grid>
       <Grid item xs={12}>
-        <StudentData 
-          NumRow={visible}
-          name={submitName}
-          gender={submitGender}
-          age={submitAge}
-          />
+        <StudentData/>
       </Grid>
       <Grid item xs={6} className={classes.submit}>
        
